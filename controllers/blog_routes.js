@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
         const all_posts = postData.map(post => post.get({plain: true}));
 
         // loop over the posts, map over and create a new array called post that will contain the actual posts
-        res.render('homepage', {all_posts})
+        res.render('home', {all_posts})
     } catch (error) { // if there is an issue
         res.status (504).json(error);
     }
